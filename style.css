@@ -3,7 +3,7 @@ body {
   color: black;
   text-align: center;
   background-color: bisque;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Tahoma', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,11 +20,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
+a img {
+  height: 2em;
+  width: 2em;
+}
 p {
   font-size: 1.2em;
   margin: 0.5em 0;
 }
 header {
+  display: flex;
+  flex-direction: column;
+}
+.header-content {
   border: 0.1em solid darkorange;
   border-radius: .5em;
   padding: 0.5em;
@@ -32,24 +40,45 @@ header {
   background-color: thistle;
   position: relative;  
   text-align: center;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-bottom: 12px;
-  padding-left: 12px;
-  padding-top: 12px;
-  padding-right: 12px;
-  /* left: 135px; */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
 }
 header, main {
   width: 100%;
   max-width: 500px;
 }
-/* Links & Accents */
+nav {
+  margin-top: 12px;
+  position: relative;
+  /* border: 1px solid darkorange;
+  background-color: lavenderblush; */
+  /* border-radius: 0.5em; */
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap : 0.01em;
+  /* position: absolute */
+}
+nav ul li {
+  margin: 0.5em 1em;
+}
+nav ul li a {
+  font-size: 0.75em;
+  font-weight: bold;
+}
+section {
+  margin-bottom: 48px;
+}
 
 /* Images */
 .hero-img {
   max-width: 70%;
   height: auto;
+  border: solid 1px darkorange;
   border-radius: 1em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 1em 0;
@@ -100,14 +129,72 @@ main {
   text-decoration: underline;
 }
 .special-offer {
-border: 2px sloid darkorange;
+border: 2px solid darkorange;
 border-radius: 0.5em;
 max-width: 80%;
+background-color: thistle;
+}
+.special-offer:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
 }
 .price-was {
   text-decoration: line-through;
   color: gray;
   margin-right: 8px;
+}
+.seasonal-picks h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-decoration: underline;
+}
+.seasonal-card {
+  margin-bottom: 16px;
+  max-width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid darkorange;
+  border-radius: 0.5em;
+  padding: 16px;
+  background-color: thistle;
+}
+.seasonal-card img {
+  max-width: 100%;
+  border-radius: 0.5em;
+}
+.seasonal-card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+/* Testimonials Section */
+.testimonials {
+  margin-bottom: 48px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  
+}
+.testimonials h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-decoration: underline;
+}
+.testimonial {
+  max-width: 60%;
+  border: 1px solid darkorange;
+  border-radius: 0.5em;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-color: lavenderblush;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonial:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
 }
 /* Visit Us Section */
 .visit-us h2 {
@@ -131,7 +218,7 @@ max-width: 80%;
   background-color: lavenderblush;
 }
 .contact-info {
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
   /* display: flex; */
   /* justify-content: space-between; */
   gap: 9em;
@@ -145,12 +232,29 @@ iframe {
 
 /* Footer */
 footer {
-  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* margin-top: 48px; */
   min-width: 100%;
   padding: 1em 0;
   background-color: thistle;
   border-top: 0.1em solid darkorange;
   text-align: center;
+}
+.icon:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s;
+}
+.social-icons {
+  position: absolute;
+  right: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1em;
+  align-items: center;
 }
 @media (max-width: 1024px) {
   body {
@@ -167,8 +271,15 @@ footer {
     align-items: center;
   }
   .special-offer {
-    min-width: 120%;
-    width: 120%;
+    min-width: 100%;
+    width: 100%;
+  }
+  .seasonal-card {
+    max-width: 100%;
+  }
+  .footer-content {
+    font-size: 0.75em;
+   margin-right: 9em;
   }
 }
 @media (max-width: 600px) {
@@ -185,4 +296,5 @@ footer {
     max-width: 90%;
     width: 90%;
   }
+  
 }

@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Fran's Flowers | Boutique Flower Shop in San Francisco</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/6df5c16e12.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
       <div class="header-content">
         <h1><span class="accent">Fran's</span> Flowers</h1>
-        <p class="tagline">Brightening San Francisco since 1995</p>
+        <p class="tagline">Brightening the Bay Area since 1995</p>
       </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#specials">Weekly Specials</a></li>
+          <li><a href="#seasonal">Seasonal Picks</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+        </ul>
+      </nav>
     </header>
 
     <div id="hero-container">
@@ -24,7 +34,7 @@
     </div>
 
     <main>
-      <section class="about-us">
+      <section id="about" class="about-us">
         <h2><span class="accent">About</span> Us</h2>
         <p>
           Fran's Flowers was founded in 1995 by Francine Miller to share joy,
@@ -37,7 +47,7 @@
         <p>Thank you for helping us grow kindness one flower at a time.</p>
       </section>
 
-      <section class="specials">
+      <section id="specials" class="specials">
         <h2><span class="accent">Weekly</span> Specials</h2>
         <div class="specials-list">
           <article class="special-offer">
@@ -63,7 +73,51 @@
         </div>
       </section>
 
-      <section class="visit-us">
+      <section id="seasonal" class="seasonal-picks">
+        <h2><span class="accent">Seasonal</span> Picks</h2>
+        <div class="seasonal-card">
+          <img
+            class="seasonal-img"
+            src="img/seasonal.jpeg"
+            alt="Autumn Bouquet"
+          />
+          <h3>Autumn Bouquet</h3>
+          <p class="price-now">$44.99</p>
+        </div>
+
+      </section>
+
+      <section id="testimonials" class="testimonials">
+        <h2><span class="accent">Customer</span> Testimonials</h2>
+        <div class="testimonial-list">
+          <blockquote class="testimonial">
+            <p>
+              "Fran's Flowers always has the freshest blooms and the most
+              creative arrangements. I love supporting a local business that
+              gives back to the community!"
+            </p>
+            <div>- Sarah L.</div>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>
+              "The staff at Fran's Flowers are so friendly and knowledgeable.
+              They helped me pick out the perfect bouquet for my anniversary."
+            </p>
+            <div>- James K.</div>
+          </blockquote>
+
+          <blockquote class="testimonial">
+            <p>
+              "I can't recommend Fran's Flowers enough! Their flowers always
+              brighten up my home and their commitment to fighting homelessness
+              is inspiring."
+            </p>
+            <div>- Emily R.</div>
+          </blockquote>
+        </div>
+
+      <section id="visit" class="visit-us">
         <h2><span class="accent">Visit</span> Us</h2>
         <p>Come in and say hi!</p>
         <div class="contact-info">
@@ -83,10 +137,23 @@
       </section>
     </main>
 
-    <footer>
+    <footer id="soicals">
       <div class="footer-content">
         <p>&copy; 2025 Fran's Flowers LLC.</p>
         <p>Brightening lives one flower at a time</p>
+      </div>
+      <div class="social-icons">
+        <a href="#"
+        class="icon"
+          ><img src="img/facebook.png" alt="Facebook Icon"
+        /></a>
+        <a href="#"
+        class="icon"
+          ><img src="img/instagram.svg" alt="Instagram Icon"
+        /></a>
+        <a href="#"
+        class="icon"
+          ><img src="img/twitter.png" alt="X Icon"/></a>
       </div>
     </footer>
   </body>
