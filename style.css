@@ -1,33 +1,188 @@
 /* Base Styles */
 body {
-  color: royalblue;
+  color: black;
   text-align: center;
   background-color: bisque;
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Typography */
-
+h1, h2, h3 {
+  margin: 0;
+  padding: 0.5em 0;
+}
+a {
+  color: darkorange;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+p {
+  font-size: 1.2em;
+  margin: 0.5em 0;
+}
+header {
+  border: 0.1em solid darkorange;
+  border-radius: .5em;
+  padding: 0.5em;
+  margin: 1em 0;
+  background-color: thistle;
+  position: relative;  
+  text-align: center;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-right: 12px;
+  /* left: 135px; */
+}
+header, main {
+  width: 100%;
+  max-width: 500px;
+}
 /* Links & Accents */
 
 /* Images */
-
-/* Hero Section */
+.hero-img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
+.special-img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 1em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
 
 /* Main Content */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+  /* background-color: white; */
+}
 
 /* About Section */
-
+.about-us {
+  margin-bottom: 48px;
+  max-width: 50%;
+  text-align: center;
+}
+.about-us p {
+  margin-bottom: 16px;
+  line-height: 1.5em;
+  border: 1px solid darkorange;
+  border-radius: 0.5em;
+  padding: 16px;
+  background-color: lavenderblush;
+}
 /* Specials Section */
-
+.specials-list {
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+.specials h2 {
+  margin-bottom: 16px;
+  font-size: 2em;
+  text-decoration: underline;
+}
+.special-offer {
+border: 2px sloid darkorange;
+border-radius: 0.5em;
+max-width: 80%;
+}
+.price-was {
+  text-decoration: line-through;
+  color: gray;
+  margin-right: 8px;
+}
 /* Visit Us Section */
+.visit-us h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-decoration: underline;
+}
+.visit-us p {
+  /* margin-bottom: 6em; */
+  border: solid 1px darkorange;
+  border-radius: 0.5em;
+  padding: 16px;
+  background-color: lavenderblush;
+}
+.address-block {
+  font-style: normal;
+  line-height: 1.5em;
+  border: solid 1px darkorange;
+  border-radius: 0.5em;
+  padding: 16px;
+  background-color: lavenderblush;
+}
+.contact-info {
+  margin-bottom: 48px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  gap: 9em;
+  font-size: 1.1em;
+}
 
 iframe {
   width: 100%;
-  height: 350px;
+  height: 200px;
 }
 
 /* Footer */
 footer {
   margin-top: 48px;
+  min-width: 100%;
+  padding: 1em 0;
+  background-color: thistle;
+  border-top: 0.1em solid darkorange;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.75em;
+  }
+  header {
+    min-width: 90%;
+  }
+  #hero-container img {
+    min-width: 90%;
+  }
+  .specials-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .special-offer {
+    min-width: 120%;
+    width: 120%;
+  }
+}
+@media (max-width: 600px) {
+  .about-us, .special-offer {
+    max-width: 100%;
+  }
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  header,
+  .hero-img {
+    max-width: 90%;
+    width: 90%;
+  }
 }
