@@ -166,6 +166,19 @@ background-color: thistle;
   transform: scale(1.05);
   transition: transform 0.3s;
 }
+.seasonal-desc {
+  margin: 0 auto 24px auto;
+  max-width: 500px;
+  width: 80%;
+  font-size: 1.1em;
+  color: black;
+  background: lavenderblush;
+  border: 1px solid darkorange;
+  border-radius: 0.5em;
+  padding: 12px 18px;
+  text-align: center;
+}
+
 /* Testimonials Section */
 .testimonials {
   margin-bottom: 48px;
@@ -275,7 +288,7 @@ footer {
     width: 100%;
   }
   .seasonal-card {
-    max-width: 100%;
+    max-width: 50%;
   }
   .footer-content {
     font-size: 0.75em;
@@ -295,6 +308,9 @@ footer {
   .hero-img {
     max-width: 90%;
     width: 90%;
+  }
+  .seasonal-desc {
+    display: none;
   }
   
 }
